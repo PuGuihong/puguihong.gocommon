@@ -5,16 +5,19 @@ import (
 	"fmt"
 	"os"
 	"simplemath"
+	"simpletest"
 	"strconv"
 )
 
 var Usage = func() {
-	fmt.Println("USAGE: calc command [argument] ...")
-	fmt.Println("\n The commands are:\n\t add \t Addition of two values.\n\tsqrt\tSquare root of a non-negative value.")
+	fmt.Println("USAGE: calc command [arguments] ...")
+	fmt.Println("\nThe commands are:\n\tadd\tAddition of two values.\n\tsqrt\tSquare root of a non-negative value.")
 }
 
 func main() {
+	simpletest.PrintSample()
 	args := os.Args
+	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {
 		Usage()
 		return

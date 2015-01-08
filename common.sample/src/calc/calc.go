@@ -16,6 +16,8 @@ var Usage = func() {
 
 func main() {
 	simpletest.PrintSample()
+
+	return
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {

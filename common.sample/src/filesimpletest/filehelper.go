@@ -1,5 +1,5 @@
 //filesimple.go
-package simpletest
+package filesimpletest
 
 import (
 	"os"

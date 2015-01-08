@@ -18,7 +18,7 @@
 接口 interface
 *
 */
-package simpletest
+package varsimpletest
 
 import (
 	"fmt"

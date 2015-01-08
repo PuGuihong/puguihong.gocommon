@@ -15,8 +15,16 @@ var Usage = func() {
 }
 
 func main() {
-	simpletest.PrintSample()
 
+	//simpletest.PrintSample()//测试变量
+	//simpletest.Sample1()//测试bool
+	//simpletest.Sample2() //测试整型数据
+	//simpletest.Sample3() //测试浮点数据
+	//simpletest.Sample4() //测试复数数据
+	//simpletest.Sample5() //测试字串数据
+	//simpletest.Sample6() //测试数组数据
+	//simpletest.Sample7() //测试数组切片数据
+	simpletest.Sample8() //测试map数据
 	return
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))

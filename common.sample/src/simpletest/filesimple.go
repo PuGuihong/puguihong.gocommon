@@ -6,7 +6,9 @@ import (
 )
 
 func FileHelpe() {
-	var file = File.Create("E:/sample.txt")
-	file.WriteString("test")
+	file, err := os.Create("E:/sample2.txt")
+	if err != nil {
+		file.WriteString("this is test file")
+	}
 	file.Close()
 }

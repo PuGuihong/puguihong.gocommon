@@ -33,9 +33,11 @@ func main() {
 	/*基本函数方法  funcsampletest*/
 	//funcsampletest.Sample2() //传入不定参数
 	//funcsampletest.Sample3() //传入接口类型的不定参数
-	funcsampletest.Sample4() //defer类型的不定参数
-
-	return
+	//funcsampletest.Sample4() //defer类型的不定参数
+	//funcsampletest.OopSample1() //给系统类型添加方法
+	//funcsampletest.OopSample2() //值语义和引用语义
+	//funcsampletest.OopSample4() //值语义和引用语义
+	funcsampletest.OopSample6() //值语义和引用语义
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {

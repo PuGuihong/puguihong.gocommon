@@ -57,7 +57,3 @@ func (server *IpcServer) Connect() chan string {
 	fmt.Println("A new session has been created successfully.")
 	return session
 }
-
-func Sample() {
-	fmt.Println("tt")
-}

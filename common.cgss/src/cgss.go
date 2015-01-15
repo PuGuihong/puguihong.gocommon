@@ -14,13 +14,13 @@ import (
 var centerClient *cg.CenterClient
 
 func startCenterService() error {
-	server := ipc.NewIpcServer(&cg.CenterClient{})
-	client := ipc.NewIpcServer(server)
+	server := ipc.NewIpcServer(&cg.CenterServer{})
+	client := ipc.NewIpcClient(server)
 	centerClient = &cg.CenterClient{client}
 	return nil
 }
 func Help(args []string) int {
-	fmt.Println("")
+	fmt.Println("Commands:\nlogin<username><level><exp>\nlogout<username>\nsend<message>\nlistplayer\nquit(q)\nhelp(h)\n")
 	return 0
 }
 func Quit(args []string) int {
@@ -102,7 +102,7 @@ func main() {
 		fmt.Println("Command>")
 		b, _, _ := r.ReadLine()
 		line := string(b)
-		tokens := string.Split(line, " ")
+		tokens := strings.Split(line, " ")
 		if handler, ok := handlers[tokens[0]]; ok {
 			ret := handler(tokens)
 			if ret != 0 {

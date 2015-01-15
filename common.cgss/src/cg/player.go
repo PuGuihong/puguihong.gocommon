@@ -14,6 +14,9 @@ type Player struct {
 	mq    chan *Message //等待接收获取的消息
 }
 
+type Room struct {
+}
+
 func NewPlayer() *Player {
 	m := make(chan *Message, 1024)
 	player := &Player{"", 0, 0, 0, m}

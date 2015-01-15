@@ -45,7 +45,7 @@ func (client *CenterClient) Broadcast(message string) error {
 	if err != nil {
 		return err
 	}
-	resp, _ = client.Call("broadcast", string(b))
+	resp, _ := client.Call("broadcast", string(b))
 	if resp.Code == "200" {
 		return nil
 	}

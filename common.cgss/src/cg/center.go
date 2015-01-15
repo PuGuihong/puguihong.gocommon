@@ -25,19 +25,19 @@ type CenterServer struct {
 
 func NewCenterServer() *CenterServer {
 	servers := make(map[string]ipc.Server)
-	players := make([]*players, 0)
+	players := make([]*Player, 0)
 	return &CenterServer{servers: servers, players: players}
 }
 func (server *CenterServer) addPlayer(params string) error {
 	players := NewPlayer()
-	err := json.Unmarshal([]byte(params), &player)
+	err := json.Unmarshal([]byte(params), &players)
 	if err != nil {
 		return err
 	}
 	server.mutex.Lock()
 	defer server.mutex.Unlock()
 	//需要做重复登陆检查
-	server.players = append(server.players, player)
+	server.players = append(server.players, players)
 	return nil
 }
 func (server *CenterServer) removePlayer(params string) error {
@@ -98,7 +98,7 @@ func (server *CenterServer) Handle(method, params string) *ipc.Response {
 			return &ipc.Response{Code: err.Error()}
 		}
 	case "removeplayer":
-		err := server.removePlayyer(params)
+		err := server.removePlayer(params)
 		if err != nil {
 			return &ipc.Response{Code: err.Error()}
 		}

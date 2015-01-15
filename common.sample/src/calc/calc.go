@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"interfacesimpletest"
+	"goroutinesimple"
 	"os"
 	"simplemath"
 	"strconv"
@@ -40,8 +40,13 @@ func main() {
 	//funcsampletest.OopSample6() //值语义和引用语义
 	//funcsampletest.OopSample7() //成员变量可访问性测试
 	/* 接口属性和功能测试 interfacesimpletest*/
-	interfacesimpletest.Sample1() //
-
+	//interfacesimpletest.Sample1() //
+	/*并发和协程测试*/
+	//goroutinesimple.Sample1()
+	//goroutinesimple.Sample2() //共享内存实现进程间通信
+	//goroutinesimple.Sample3() //channel方式实现进程间通信
+	//goroutinesimple.Sample4() //select 实现异步io ，死循环
+	goroutinesimple.Sample5()
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {

@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"goroutinesimple"
+	"netsimpletest"
 	"os"
 	"simplemath"
 	"strconv"
@@ -46,7 +46,7 @@ func main() {
 	//goroutinesimple.Sample2() //共享内存实现进程间通信
 	//goroutinesimple.Sample3() //channel方式实现进程间通信
 	//goroutinesimple.Sample4() //select 实现异步io ，死循环
-	goroutinesimple.Sample5()
+	//goroutinesimple.Sample5()
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {

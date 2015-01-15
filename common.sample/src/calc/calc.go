@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"funcsampletest"
+	"interfacesimpletest"
 	"os"
 	"simplemath"
 	"strconv"
@@ -37,7 +37,11 @@ func main() {
 	//funcsampletest.OopSample1() //给系统类型添加方法
 	//funcsampletest.OopSample2() //值语义和引用语义
 	//funcsampletest.OopSample4() //值语义和引用语义
-	funcsampletest.OopSample6() //值语义和引用语义
+	//funcsampletest.OopSample6() //值语义和引用语义
+	//funcsampletest.OopSample7() //成员变量可访问性测试
+	/* 接口属性和功能测试 interfacesimpletest*/
+	interfacesimpletest.Sample1() //
+
 	args := os.Args
 	fmt.Println(" ", args[0], len(args))
 	if args == nil || len(args) < 2 {

@@ -6,6 +6,26 @@ import (
 	"fmt"
 )
 
+//成员变量的可访问性测试
+func OopSample7() {
+	r := &MyRect{X: 12.0, Y: 13.2, Width: 21.31, Height: 32.12}
+	area := r.area()
+	fmt.Println("矩形类 成员变量是： X = ", r.X, " ,Y = ", r.Y, " ,Width = ", r.Width, " ,Height = ", r.Height, "\n")
+	fmt.Println("矩形的成员方法获取面积是：", area)
+}
+
+//Rect的公有成员变量与方法
+//GO语言的可访问性是包一级的而不是类一级的。
+type MyRect struct {
+	X, Y          float64
+	Width, Height float64
+}
+
+func (r *MyRect) area() float64 {
+	return r.Width * r.Height
+}
+
+// 组合应用
 func OopSample6() {
 	bf1 := new(base)
 	bf1.fbase()
